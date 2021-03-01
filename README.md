@@ -6,16 +6,17 @@ Supports rich notifications and notification templates.
 
 ![Pushsafer logo](pushsafer_logo.png)
 
+forked from FreeTimeCoder82/node-red-contrib-pushsafer
+
 ## Install
 
 Run the following command in your Node-RED user directory - typically `~/.node-red`
 
-    npm install node-red-contrib-pushsafer
+    npm install node-red-pushsafer
 
 Or use the palette manager inside of Node-RED
 
-[![npm](https://img.shields.io/npm/v/node-red-contrib-pushsafer.svg)](https://www.npmjs.com/package/node-red-contrib-pushsafer)
-[![dependencies Status](https://david-dm.org/freetimecoder82/node-red-contrib-pushsafer/status.svg)](https://david-dm.org/freetimecoder82/node-red-contrib-pushsafer)
+[![npm](https://img.shields.io/npm/v/node-red-pushsafer.svg)](https://www.npmjs.com/package/node-red-pushsafer)
 
 ## Required inputs
 
@@ -33,6 +34,7 @@ Or use the palette manager inside of Node-RED
 - `msg.timetolive` (number): Specifies how long a message should be kept in the client APP until it is automatically deleted, [see description](https://www.pushsafer.com/pushapi_ext#API-L)
 - `msg.retry` (number): With the retry / resend parameter, a message will be resent after a certain time, [see description](https://www.pushsafer.com/pushapi_ext#API-RE)
 - `msg.expire` (number): The expire parameter stops resending push-notifications after a specified time, [see description](https://www.pushsafer.com/pushapi_ext#API-EX)
+- `msg.confirm` (number): Time in seconds after which a message should be sent again before it is confirmed, [see description](https://www.pushsafer.com/pushapi_ext#API-CR)
 - `msg.answer` (number): To respond to push notifications, pass the parameter with the value 1, [see description](https://www.pushsafer.com/pushapi_ext#API-A)
 - `msg.url` (string): This URL can be opened directly from the push notification or from the client-app, [see description](https://www.pushsafer.com/pushapi_ext#API-U)
 - `msg.urltitle` (string): Can set the title of the url, [see description](https://www.pushsafer.com/pushapi_ext#API-UT)
