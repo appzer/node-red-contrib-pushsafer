@@ -12,6 +12,7 @@ module.exports = function(RED) {
         this.timetolive = config.timetolive;
         this.retry = config.retry;
         this.expire = config.expire;
+        this.confirm = config.confirm;
         this.answer = config.answer;
         this.url = config.url;
         this.urltitle = config.urltitle;
