@@ -32,6 +32,7 @@ module.exports = function(RED) {
                 l: msg.timetolive || node.configTemplate.timetolive,
                 re: msg.retry || node.configTemplate.retry,
                 ex: msg.expire || node.configTemplate.expire,
+                cr: msg.confirm || node.configTemplate.confirm,
                 a: msg.answer || node.configTemplate.answer,
                 u: msg.url || node.configTemplate.url,
                 ut: msg.urltitle || node.configTemplate.urltitle,
