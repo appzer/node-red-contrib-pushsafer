@@ -1,12 +1,10 @@
-# node-red-contrib-pushsafer
+# node-red-pushsafer
 
 A [Pushsafer](https://www.pushsafer.com/) API wrapper for Node-RED.
 
 Supports rich notifications and notification templates.
 
 ![Pushsafer logo](pushsafer_logo.png)
-
-forked from FreeTimeCoder82/node-red-contrib-pushsafer
 
 ## Install
 
@@ -33,14 +31,10 @@ Or use the palette manager inside of Node-RED
 - `msg.devices` (string): This parameter controls to which devices or device groups the message is sent to, [see description](https://www.pushsafer.com/pushapi_ext#API-D)
 - `msg.timetolive` (number): Specifies how long a message should be kept in the client APP until it is automatically deleted, [see description](https://www.pushsafer.com/pushapi_ext#API-L)
 - `msg.retry` (number): With the retry / resend parameter, a message will be resent after a certain time, [see description](https://www.pushsafer.com/pushapi_ext#API-RE)
-- `msg.expire` (number): The expire parameter stops resending push-notifications after a specified time, [see description](https://www.pushsafer.com/pushapi_ext#API-EX)
-- `msg.confirm` (number): Time in seconds after which a message should be sent again before it is confirmed, [see description](https://www.pushsafer.com/pushapi_ext#API-CR)
+- `msg.expire` (number): With the retry / resend Parameter re, a message will be resent after a certain time, [see description](https://www.pushsafer.com/pushapi_ext#API-EX)
 - `msg.answer` (number): To respond to push notifications, pass the parameter with the value 1, [see description](https://www.pushsafer.com/pushapi_ext#API-A)
 - `msg.url` (string): This URL can be opened directly from the push notification or from the client-app, [see description](https://www.pushsafer.com/pushapi_ext#API-U)
 - `msg.urltitle` (string): Can set the title of the url, [see description](https://www.pushsafer.com/pushapi_ext#API-UT)
 - `msg.image` (string): The path of an image, which will be shown directly in the notification. Local file path or http(s) url, [see description](https://www.pushsafer.com/pushapi_ext#API-P)
 - `msg.image2` (string): The path of a second image, which will be shown in the Pushsafer app. Local file path or http(s) url, [see description](https://www.pushsafer.com/pushapi_ext#API-P)
 - `msg.image3` (string): The path of a third image, which will be shown in the Pushsafer app. Local file path or http(s) url, [see description](https://www.pushsafer.com/pushapi_ext#API-P)
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbODg1MzkwMzZdfQ==
--->
