@@ -28,7 +28,7 @@ module.exports = function(RED) {
         this.timetolive = config.timetolive;
         this.retry = config.retry;
         this.expire = config.expire;
-        this.confirm = config.confirm;
+		this.confirm = config.confirm;
         this.answer = config.answer;
         this.url = config.url;
         this.urltitle = config.urltitle;
@@ -90,7 +90,7 @@ module.exports = function(RED) {
                 l:  msg.timetolive  || node.notificationtemplate.timetolive,
                 re: msg.retry       || node.notificationtemplate.retry,
                 ex: msg.expire      || node.notificationtemplate.expire,
-                cr: msg.confirm     || node.notificationtemplate.confirm,
+				cr: msg.confirm     || node.notificationtemplate.confirm,
                 a:  msg.answer      || node.notificationtemplate.answer,
                 u:  msg.url         || node.notificationtemplate.url,
                 ut: msg.urltitle    || node.notificationtemplate.urltitle,
