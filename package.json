@@ -1,32 +1,33 @@
 {
-    "name": "node-red-pushsafer",
-    "version": "1.0.1",
-    "description": "A Pushsafer API wrapper for Node-RED",
-    "dependencies": {
-        "node-base64-image": "^1.0.6"
-    },
-    "devDependencies": {
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/appzer/node-red-pushsafer.git"
-    },
-    "license": "MIT",
-    "keywords": [
-        "node-red",
-        "pushsafer",
-        "notification",
-        "push notification",
-        "SmartHome",
-        "Internet of Things",
-        "IoT"
-    ],
-    "node-red": {
-        "nodes": {
-            "pushsafer": "pushsafer/pushsafer.js"
-        }
-    },
-    "author": {
-        "name": "Pushsafer.com <support@pushsafer.com>"
+  "_from": "node-red-pushsafer",
+  "author": {
+    "name": "Pushsafer.com (Kevin Siml)",
+    "email": "support@pushsafer.com"
+  },
+  "dependencies": {
+    "node-base64-image": "^1.0.6",
+    "pushsafer-notifications": "^0.1.9"
+  },
+  "description": "A PushSafer API wrapper for Node-RED",
+  "homepage": "https://github.com/appzer/node-red-pushsafer#readme",
+  "keywords": [
+    "node-red",
+    "pushsafer",
+    "notification",
+    "Smarthome",
+    "Internet of Things",
+    "IoT"
+  ],
+  "license": "MIT",
+  "name": "node-red-pushsafer",
+  "node-red": {
+    "nodes": {
+      "pushsafer": "pushsafer/pushsafer.js"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appzer/node-red-pushsafer.git"
+  },
+  "version": "1.0.3"
 }
