@@ -1,6 +1,6 @@
 {
     "name": "node-red-pushsafer",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A Pushsafer API wrapper for Node-RED",
     "dependencies": {
         "node-base64-image": "^1.0.6"
@@ -23,11 +23,7 @@
     ],
     "node-red": {
         "nodes": {
-            "pushsafer_config_api": "pushsafer/config_api.js",
-            "pushsafer_config_devices": "pushsafer/config_devices.js",
-            "pushsafer_config_template": "pushsafer/config_template.js",
-            "pushsafer_message": "pushsafer/message.js",
-            "pushsafer_read": "pushsafer/read.js"
+            "pushsafer": "pushsafer/pushsafer.js"
         }
     },
     "author": {
