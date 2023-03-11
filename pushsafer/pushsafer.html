@@ -46,7 +46,7 @@
     </div>    
     <div class="form-row">
         <label for="node-config-input-icon"><i class="fa fa-thumbs-o-up"></i> Icon</label>
-        <input type="number" min="1" max="177" id="node-config-input-icon" placeholder="Icon of the notification">
+        <input type="number" min="1" max="181" id="node-config-input-icon" placeholder="Icon of the notification">
     </div>
     <div class="form-row">
         <label for="node-config-input-iconcolor"><i class="fa fa-paint-brush"></i> Icon Color</label>
@@ -157,7 +157,7 @@
         <label for="node-config-input-expire"><i class="fa fa-heart"></i> Expire</label>
         <input type="number" min="60" max="10800" step="60" id="node-config-input-expire" placeholder="Time in seconds after resending stops">
     </div>
-	<div class="form-row">
+    <div class="form-row">
         <label for="node-config-input-confirm"><i class="fa fa-heart"></i> Confirm</label>
         <input type="number" min="10" max="10800" step="10" id="node-config-input-confirm" placeholder="Time in seconds a message will be sent again until it is confirmed">
     </div>
@@ -167,6 +167,18 @@
             <option value></option>
             <option value="0">not allowed</option>
             <option value="1">allowed</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-answeroptions"><i class="fa fa-commenting-o"></i> Answer Options</label>
+        <input type="text" id="node-config-input-answeroptions" placeholder="yes|no|maybe">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-answerforce"><i class="fa fa-commenting-o"></i> Answer Force</label>
+        <select id="node-config-input-answerforce" style="width:70%">
+            <option value></option>
+            <option value="0">no</option>
+            <option value="1">yes</option>
         </select>
     </div>
     <div class="form-row">
@@ -218,7 +230,7 @@
                 return String(v).length <= 255 ? true : false;
             }},
             icon: {value: null, required: false, validate: function(v){
-                return (v >= 1 && v <= 177) || v === '' ? true : false;
+                return (v >= 1 && v <= 181) || v === '' ? true : false;
             }},
             iconcolor: {value: '#FFFFFF', required: false, validate: function(v){
                 return /^#[0-9A-F]{6}$/i.test(v);
@@ -242,10 +254,14 @@
             expire: {value: null, required: false, validate: function(v){
                 return (v >= 60 && v <= 10800) || v === '' ? true : false;
             }},
-			confirm: {value: null, required: false, validate: function(v){
+	    confirm: {value: null, required: false, validate: function(v){
                 return (v >= 10 && v <= 10800) || v === '' ? true : false;
             }},
             answer: {value: null, required: false, validate: function(v){
+                return (v >= 0 && v <= 1) || v === '' ? true : false;
+            }},
+	    answeroptions: {required: false},
+	    answerforce: {value: null, required: false, validate: function(v){
                 return (v >= 0 && v <= 1) || v === '' ? true : false;
             }},
             url: {required: false},
@@ -265,7 +281,7 @@
                 for (i=65; i<=128; i++){
                     $('#pushsafer-icon-list-middle').append('<li><img src="https://www.pushsafer.com/assets/icons/' + i + '.jpg" width="32" height="32"></li>');
                 }
-                for (i=129; i<=177; i++){
+                for (i=129; i<=181; i++){
                     $('#pushsafer-icon-list-right').append('<li><img src="https://www.pushsafer.com/assets/icons/' + i + '.jpg" width="32" height="32"></li>');
                 }
                 $('#pushsafer-template-icon-list').hide();
@@ -348,10 +364,16 @@
             <dt class="optional">expire<span class="property-type">number</span></dt>
             <dd> the title of the notification</dd>
 			
-			<dt class="optional">confirm<span class="property-type">number</span></dt>
+	    <dt class="optional">confirm<span class="property-type">number</span></dt>
             <dd> the title of the notification</dd>
 
             <dt class="optional">answer<span class="property-type">number</span></dt>
+            <dd> the title of the notification</dd>
+	    
+	    <dt class="optional">answeroptions<span class="property-type">string</span></dt>
+            <dd> the title of the notification</dd>
+	    
+	    <dt class="optional">answerforce<span class="property-type">number</span></dt>
             <dd> the title of the notification</dd>
 
             <dt class="optional">url<span class="property-type">string</span></dt>
